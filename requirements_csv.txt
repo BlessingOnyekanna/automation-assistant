@@ -1,0 +1,4 @@
+# Requirements for CSV Version
+# Install with: pip install -r requirements_csv.txt
+
+requests==2.31.0
