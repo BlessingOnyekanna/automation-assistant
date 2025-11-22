@@ -1,0 +1,15 @@
+# Environment variables (API keys)
+.env
+
+# Data files
+data/
+*.csv
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db

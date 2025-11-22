@@ -1,4 +1,0 @@
-timestamp,city,temperature_celsius,windspeed_kmh,weather_code,latitude,longitude
-2025-11-22 14:03:59,London,8.1,15.9,61,51.50853,-0.12574
-2025-11-22 14:04:03,New York,7.7,11.1,61,40.71427,-74.00597
-2025-11-22 14:04:07,Tokyo,10.6,3.7,1,35.6895,139.69171
