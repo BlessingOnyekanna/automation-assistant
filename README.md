@@ -1,6 +1,12 @@
 # 🤖 Automation Assistant
 
-**A professional portfolio project demonstrating Python automation, API integration, and data collection skills.**
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/github/stars/BlessingOnyekanna/automation-assistant?style=social)](https://github.com/BlessingOnyekanna/automation-assistant)
+
+> A professional Python automation tool that collects data from multiple APIs and exports to CSV or Google Sheets.
+
+[View Demo](#-screenshots) · [Report Bug](https://github.com/BlessingOnyekanna/automation-assistant/issues) · [Request Feature](https://github.com/BlessingOnyekanna/automation-assistant/issues)
 
 ---
 
