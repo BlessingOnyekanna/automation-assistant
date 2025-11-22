@@ -12,6 +12,8 @@ import requests
 import json
 from datetime import datetime
 import time
+import os
+from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -31,11 +33,13 @@ class AutomationAssistantGSheets:
             credentials_file (str): Path to Google service account JSON file
             spreadsheet_id (str): Google Sheets spreadsheet ID
         """
+        # Load environment variables
+        load_dotenv()  # ← ADD THIS LINE
+        
         self.spreadsheet_id = spreadsheet_id
         self.service = self._authenticate_google_sheets(credentials_file)
         print("✓ Connected to Google Sheets successfully")
-    
-    
+        
     def _authenticate_google_sheets(self, credentials_file):
         """
         Authenticate with Google Sheets API using service account.
@@ -186,10 +190,16 @@ class AutomationAssistantGSheets:
         """
         print(f"\n📡 Fetching latest {category} news from {country.upper()}...")
         
-        api_key = "YOUR_API_KEY"  # Replace with your NewsAPI key
-        
-        if api_key == "YOUR_API_KEY":
-            print("⚠️  Please get a free API key from https://newsapi.org/register")
+        # Get API key from environment variable
+        api_key = os.getenv('NEWS_API_KEY')
+
+        if not api_key:
+            print("⚠️  NEWS_API_KEY not found!")
+            print("   To use the News API:")
+            print("   1. Get a free API key from https://newsapi.org/register")
+            print("   2. Create a .env file in your project folder")
+            print("   3. Add this line: NEWS_API_KEY=your-actual-key")
+            print("   4. Run the script again")
             return None
         
         url = "https://newsapi.org/v2/top-headlines"
@@ -395,7 +405,7 @@ def main():
     
     # Configuration
     CREDENTIALS_FILE = "credentials.json"  # Your service account JSON file
-    SPREADSHEET_ID = "YOUR_SPREADSHEET_ID"  # Your Google Sheets ID
+    SPREADSHEET_ID =  "1ou84Bg_HXvRx45cwc4xyh7Yza-b-uPkXJdqo7EiC3RE"  # Your Google Sheets ID
     
     # Check configuration
     if SPREADSHEET_ID == "YOUR_SPREADSHEET_ID":
