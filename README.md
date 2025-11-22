@@ -43,6 +43,18 @@ The Automation Assistant is a Python-based tool that automatically collects data
 - **Use Case**: Great for media monitoring, competitive analysis, research
 
 ---
+## 📸 Screenshots
+
+### Interactive Menu
+![Menu](screenshot/menu.png)
+
+### Successful Data Collection
+![Success](screenshot/success.png)
+
+### Collected Data
+![Data](screenshot/data.png)
+
+---
 
 ## 🚀 Quick Start Guide
 
